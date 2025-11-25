@@ -72,23 +72,33 @@
         </div>
     </section>
 
-    <!-- Confirmar Asistencia -->
-    <section id="confirmar" class="seccion">
+    <!-- SECCIÓN CONFIRMAR ASISTENCIA -->
+<section id="confirmar" class="seccion">
+    <div class="confirmar-header">
         <h2>Confirmar Asistencia</h2>
-        <form id="form-asistencia" class="form-asistencia">
-            <input type="text" id="nombre" placeholder="Tu nombre completo" required>
-            <input type="email" id="email" placeholder="Tu email" required>
-            <select id="asistentes" required>
-                <option value="">¿Cuántos asistirán?</option>
-                <option value="1">1 persona</option>
-                <option value="2">2 personas</option>
-                <option value="3">3 personas</option>
-                <option value="4">4 personas</option>
-            </select>
-            <textarea id="mensaje" placeholder="Mensaje opcional (alergias, etc.)"></textarea>
-            <button type="submit" class="btn">Confirmar Asistencia</button>
-        </form>
-    </section>
+        <p>Completá el siguiente formulario para confirmar tu presencia en nuestra boda</p>
+    </div>
+    
+    <div class="form-embed-container">
+        <iframe 
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfHCAzgWspsq8_p0VxPEtVB7dJkfmpAEnp6QEdk8EWxn7QHgQ/viewform?embedded=true" 
+            width="100%" 
+            height="600" 
+            frameborder="0" 
+            marginheight="0" 
+            marginwidth="0"
+            loading="lazy"
+        >
+            Cargando formulario de confirmación...
+        </iframe>
+    </div>
+    
+    <div class="form-backup">
+        <p class="backup-note">
+            💡 Si tenés problemas con el formulario, podés escribirnos directamente por WhatsApp
+        </p>
+    </div>
+</section>
 
     <!-- Regalos -->
     <section id="regalos" class="seccion">
