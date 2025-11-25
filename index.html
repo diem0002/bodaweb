@@ -3,122 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maria & Juan - Nuestra Boda</title>
+    <title>Merry & Fran - Nuestra Boda</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-content">
-            <div class="nav-logo">María & Juan</div>
-            <ul class="nav-links">
+    <!-- NAVBAR -->
+    <nav class="navbar-elegante">
+        <div class="nav-container">
+            <div class="nav-logo">M&F</div>
+            <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+            <ul class="nav-menu">
                 <li><a href="#hero">Inicio</a></li>
-                <li><a href="#ceremonia">Ceremonia</a></li>
-                <li><a href="#recepcion">Recepción</a></li>
+                <li><a href="#eventos">Celebración</a></li>
                 <li><a href="#agendar">Agendar</a></li>
-                <li><a href="#confirmar">Asistencia</a></li>
+                <li><a href="#confirmar">Confirmar</a></li>
                 <li><a href="#regalos">Regalos</a></li>
-                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#faq">Info</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- HERO -->
     <section id="hero" class="hero">
         <div class="hero-content">
-            <h1>María & Juan</h1>
-            <p class="fecha">15 de Diciembre, 2024</p>
+            <h1 class="nombres-novios">Merry & Fran</h1>
+            <div class="fecha-boda">
+                <span class="dia">25</span>
+                <span class="mes-ano">noviembre 2025</span>
+            </div>
             <div class="countdown" id="countdown">
-                <span id="days">00</span>días <span id="hours">00</span>horas 
-                <span id="minutes">00</span>minutos <span id="seconds">00</span>segundos
+                <div class="countdown-item">
+                    <span id="days">00</span>
+                    <small>días</small>
+                </div>
+                <div class="countdown-item">
+                    <span id="hours">00</span>
+                    <small>horas</small>
+                </div>
+                <div class="countdown-item">
+                    <span id="minutes">00</span>
+                    <small>minutos</small>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>▼</span>
             </div>
         </div>
     </section>
 
-    <!-- Ceremonia -->
-    <section id="ceremonia" class="seccion">
-        <h2>Ceremonia</h2>
-        <div class="ubicacion-card">
-            <h3>Iglesia San José</h3>
-            <p class="horario">⏰ 16:00 horas</p>
-            <p class="direccion">📍 Av. Siempre Viva 123, Ciudad</p>
-            <div class="mapa" id="mapa-ceremonia">
-                <!-- Mapa se cargará aquí -->
+    <!-- EVENTOS (Ceremonia + Recepción unificadas) -->
+    <section id="eventos" class="seccion">
+        <h2 class="titulo-seccion">Nuestra Celebración</h2>
+        <div class="grid-eventos">
+            <!-- Ceremonia -->
+            <div class="card-evento">
+                <div class="icono-evento">💒</div>
+                <h3>Ceremonia</h3>
+                <div class="detalle-evento">
+                    <p class="lugar">Castorial Sara Antonio de Padua</p>
+                    <p class="direccion">Conocerlos. Entre ellos</p>
+                    <p class="horario">
+                        <span class="fecha">Sábado 26 de Abril</span>
+                        <span class="hora">16:00 hs</span>
+                    </p>
+                </div>
+                <button class="btn-mapa" onclick="abrirMapa('ceremonia')">
+                    📍 ¿Cómo llego?
+                </button>
             </div>
-            <button class="btn" onclick="abrirMapa('ceremonia')">Cómo llegar</button>
+
+            <!-- Recepción -->
+            <div class="card-evento">
+                <div class="icono-evento">🎉</div>
+                <h3>Fiesta</h3>
+                <div class="detalle-evento">
+                    <p class="lugar">Cuba Progresiva</p>
+                    <p class="direccion">Conocerlos. Entre ellos</p>
+                    <p class="horario">
+                        <span class="fecha">Sábado 26 de Abril</span>
+                        <span class="hora">20:00 hs</span>
+                    </p>
+                </div>
+                <button class="btn-mapa" onclick="abrirMapa('recepcion')">
+                    📍 ¿Cómo llego?
+                </button>
+            </div>
         </div>
     </section>
 
-    <!-- Recepción -->
-    <section id="recepcion" class="seccion">
-        <h2>Recepción</h2>
-        <div class="ubicacion-card">
-            <h3>Salón de Fiestas "Las Flores"</h3>
-            <p class="horario">⏰ 19:00 horas</p>
-            <p class="direccion">📍 Calle Falsa 456, Ciudad</p>
-            <div class="mapa" id="mapa-recepcion">
-                <!-- Mapa se cargará aquí -->
-            </div>
-            <button class="btn" onclick="abrirMapa('recepcion')">Cómo llegar</button>
-        </div>
-    </section>
-
-    <!-- Agendar Fecha -->
+    <!-- AGENDAR FECHA -->
     <section id="agendar" class="seccion">
-        <h2>Agendar Fecha</h2>
+        <h2 class="titulo-seccion">Agendar Fecha</h2>
         <div class="agendar-content">
             <p>No te olvides de agendar nuestra fecha especial en tu calendario</p>
-            <button class="btn" onclick="agendarEnCalendario()">📅 Agendar en Google Calendar</button>
+            <button class="btn-mapa" onclick="agendarEnCalendario()">📅 Agendar en Google Calendar</button>
         </div>
     </section>
 
-    <!-- SECCIÓN CONFIRMAR ASISTENCIA -->
-<section id="confirmar" class="seccion">
-    <div class="confirmar-header">
-        <h2>Confirmar Asistencia</h2>
-        <p>Completá el siguiente formulario para confirmar tu presencia en nuestra boda</p>
-    </div>
-    
-    <div class="form-embed-container">
-        <iframe 
-            src="https://docs.google.com/forms/d/e/1FAIpQLSfHCAzgWspsq8_p0VxPEtVB7dJkfmpAEnp6QEdk8EWxn7QHgQ/viewform?embedded=true" 
-            width="100%" 
-            height="600" 
-            frameborder="0" 
-            marginheight="0" 
-            marginwidth="0"
-            loading="lazy"
-        >
-            Cargando formulario de confirmación...
-        </iframe>
-    </div>
-    
-    <div class="form-backup">
-        <p class="backup-note">
-            💡 Si tenés problemas con el formulario, podés escribirnos directamente por WhatsApp
-        </p>
-    </div>
-</section>
+    <!-- CONFIRMAR ASISTENCIA -->
+    <section id="confirmar" class="seccion">
+        <div class="confirmar-header">
+            <h2 class="titulo-seccion">Confirmar Asistencia</h2>
+            <p>Completá el siguiente formulario para confirmar tu presencia en nuestra boda</p>
+        </div>
+        <div class="form-embed-container">
+            <iframe 
+                src="https://docs.google.com/forms/d/e/1FAIpQLSfHCAzgWspsq8_p0VxPEtVB7dJkfmpAEnp6QEdk8EWxn7QHgQ/viewform?embedded=true" 
+                width="100%" 
+                height="600" 
+                frameborder="0" 
+                marginheight="0" 
+                marginwidth="0"
+                loading="lazy">
+                Cargando formulario de confirmación...
+            </iframe>
+        </div>
+        <div class="form-backup">
+            <p class="backup-note">
+                💡 Si tenés problemas con el formulario, podés escribirnos directamente por WhatsApp
+            </p>
+        </div>
+    </section>
 
-    <!-- Regalos -->
+    <!-- REGALOS -->
     <section id="regalos" class="seccion">
-        <h2>Lista de Regalos</h2>
+        <h2 class="titulo-seccion">Lista de Regalos</h2>
         <div class="regalos-content">
             <p>Tu presencia es nuestro mejor regalo, pero si querés hacernos un obsequio:</p>
             <div class="alias-card">
                 <h3>Alias para transferencia</h3>
                 <div class="alias-item">
-                    <span id="alias-text">maria.juan.amor</span>
+                    <span id="alias-text">merry.fran.amor</span>
                     <button class="btn-copy" onclick="copiarAlias()">📋 Copiar</button>
                 </div>
-                <p class="alias-nota">También podes acercarnos tu regalo el día de la fiesta</p>
+                <p class="alias-nota">También podés acercarnos tu regalo el día de la fiesta</p>
             </div>
         </div>
     </section>
 
     <!-- FAQ -->
     <section id="faq" class="seccion">
-        <h2>Preguntas Frecuentes</h2>
+        <h2 class="titulo-seccion">Preguntas Frecuentes</h2>
         <div class="faq-content">
             <div class="faq-item">
                 <h3>¿Hay estacionamiento?</h3>
@@ -132,14 +157,19 @@
                 <h3>¿Dress code?</h3>
                 <p>Elegante sport - tonos pastel bienvenidos</p>
             </div>
+            <div class="faq-item">
+                <h3>¿A qué hora debemos llegar?</h3>
+                <p>Recomendamos llegar 15-20 minutos antes del horario de cada evento.</p>
+            </div>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer>
-        <p>Con amor, María & Juan</p>
+        <p>Con amor, Merry & Fran</p>
     </footer>
 
-    <!-- Scripts -->
+    <!-- SCRIPTS -->
     <script src="js/main.js"></script>
     <script src="js/calendar.js"></script>
     <script src="js/form.js"></script>

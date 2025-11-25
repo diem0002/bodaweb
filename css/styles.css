@@ -1,14 +1,17 @@
-/* Colores pastel para la paleta */
+/* ===== PALETA DE COLORES RENOVADA ===== */
 :root {
-    --rosa-pastel: #f8c8dc;
-    --celeste-pastel: #b8e0f6;
-    --verde-pastel: #d4f0c9;
-    --lila-pastel: #d8cdf0;
-    --beige: #f9f3e9;
-    --texto: #5a5a5a;
+    --verde-sage: #8a9b8c;
+    --verde-oliva: #a4b8a5;
+    --beige-claro: #f8f5f0;
+    --beige-medio: #e8e4db;
+    --beige-oscuro: #d6cec0;
+    --texto-oscuro: #5a5a5a;
+    --texto-medio: #7a7a7a;
     --blanco: #ffffff;
+    --borde-sutil: rgba(138, 155, 140, 0.2);
 }
 
+/* ===== RESET Y BASE ===== */
 * {
     margin: 0;
     padding: 0;
@@ -16,290 +19,42 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    color: var(--texto);
-    background-color: var(--beige);
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: var(--texto-oscuro);
+    background-color: var(--beige-claro);
     line-height: 1.6;
     scroll-behavior: smooth;
+    padding-top: 80px;
 }
 
-/* Hero Section */
-.hero {
-    background: linear-gradient(135deg, var(--rosa-pastel), var(--celeste-pastel));
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    position: relative;
-}
-
-.hero-content h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+/* ===== TIPOGRAFÍA ELEGANTE ===== */
+h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
 }
 
-.hero .fecha {
-    font-size: 1.8rem;
-    margin-bottom: 2rem;
-    font-weight: 300;
-}
-
-.countdown {
-    font-size: 1.2rem;
-    background: rgba(255,255,255,0.2);
-    padding: 1rem 2rem;
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-}
-
-.countdown span {
-    font-weight: bold;
-    background: var(--blanco);
-    color: var(--rosa-pastel);
-    padding: 0.2rem 0.5rem;
-    border-radius: 5px;
-    margin: 0 0.2rem;
-}
-
-/* Secciones generales */
-.seccion {
-    padding: 5rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.seccion h2 {
-    text-align: center;
-    margin-bottom: 3rem;
-    color: var(--texto);
-    font-size: 2.5rem;
-    font-weight: 300;
-}
-
-/* Ubicaciones */
-.ubicacion-card {
-    background: var(--blanco);
-    padding: 3rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.ubicacion-card h3 {
-    color: var(--lila-pastel);
-    margin-bottom: 1rem;
-    font-size: 1.8rem;
-}
-
-.horario, .direccion {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-}
-
-.mapa {
-    height: 200px;
-    background: var(--beige);
-    border-radius: 10px;
-    margin: 1.5rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--texto);
-}
-
-/* Botones */
-.btn {
-    background: var(--rosa-pastel);
-    color: var(--blanco);
-    padding: 12px 30px;
-    border: none;
-    border-radius: 25px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 1rem;
-}
-
-.btn:hover {
-    background: var(--lila-pastel);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-/* Agendar */
-.agendar-content {
-    text-align: center;
-    background: var(--blanco);
-    padding: 3rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.agendar-content p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-}
-
-/* Formulario */
-.form-asistencia {
-    background: var(--blanco);
-    padding: 3rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.form-asistencia input,
-.form-asistencia select,
-.form-asistencia textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 1rem;
-    border: 2px solid var(--beige);
-    border-radius: 10px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-}
-
-.form-asistencia input:focus,
-.form-asistencia select:focus,
-.form-asistencia textarea:focus {
-    outline: none;
-    border-color: var(--celeste-pastel);
-}
-
-.form-asistencia textarea {
-    height: 100px;
-    resize: vertical;
-}
-
-/* Regalos */
-.regalos-content {
-    text-align: center;
-    background: var(--blanco);
-    padding: 3rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.alias-card {
-    margin-top: 2rem;
-}
-
-.alias-item {
-    background: var(--verde-pastel);
-    padding: 1.5rem;
-    border-radius: 15px;
-    margin: 1.5rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#alias-text {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: var(--texto);
-}
-
-.btn-copy {
-    background: var(--celeste-pastel);
-    color: var(--blanco);
-    border: none;
-    padding: 8px 15px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn-copy:hover {
-    background: var(--lila-pastel);
-}
-
-.alias-nota {
-    font-style: italic;
-    margin-top: 1rem;
-    color: var(--texto);
-    opacity: 0.8;
-}
-
-/* FAQ */
-.faq-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.faq-item {
-    background: var(--blanco);
-    padding: 2rem;
-    margin-bottom: 1.5rem;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.faq-item h3 {
-    color: var(--rosa-pastel);
-    margin-bottom: 1rem;
-}
-
-/* Footer */
-footer {
-    background: linear-gradient(135deg, var(--lila-pastel), var(--celeste-pastel));
-    color: var(--blanco);
-    text-align: center;
-    padding: 2rem;
-    margin-top: 3rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-    
-    .seccion {
-        padding: 3rem 1rem;
-    }
-    
-    .ubicacion-card,
-    .agendar-content,
-    .form-asistencia,
-    .regalos-content {
-        padding: 2rem 1.5rem;
-    }
-    
-    .alias-item {
-        flex-direction: column;
-        gap: 1rem;
-    }
-}
-
-/* Navigation Bar */
-.navbar {
+/* ===== NAVBAR ELEGANTE ===== */
+.navbar-elegante {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background: rgba(248, 245, 240, 0.95);
+    backdrop-filter: blur(20px);
     z-index: 1000;
-    padding: 1rem 0;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    padding: 1.2rem 0;
     transition: all 0.3s ease;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid var(--borde-sutil);
 }
 
-.nav-content {
+.navbar-elegante.scrolled {
+    padding: 0.8rem 0;
+    background: rgba(248, 245, 240, 0.98);
+}
+
+.nav-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -309,172 +64,786 @@ footer {
 }
 
 .nav-logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--rosa-pastel);
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--texto);
-    font-weight: 500;
-    transition: color 0.3s ease;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-}
-
-.nav-links a:hover {
-    color: var(--rosa-pastel);
-    background: rgba(248, 200, 220, 0.1);
-}
-
-/* Scroll suave adicional */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Ajuste para que el nav no tape el contenido */
-.seccion {
-    scroll-margin-top: 80px;
-}
-
-/* Estilos para la sección de confirmación */
-.confirmar-content {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.confirmar-content h2 {
-    color: var(--lila-pastel);
-    margin-bottom: 1rem;
-}
-
-.confirmar-content > p {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-    color: var(--texto);
-}
-
-.form-container {
-    background: var(--blanco);
-    padding: 2.5rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.form-actions {
-    margin-bottom: 2rem;
-}
-
-.btn-primary {
-    background: var(--rosa-pastel);
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-bottom: 1rem;
-}
-
-.btn-primary:hover {
-    background: var(--lila-pastel);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.form-note {
-    color: #666;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--verde-sage);
+    letter-spacing: 3px;
     font-style: italic;
 }
 
-.form-info {
-    text-align: left;
-    background: var(--beige);
-    padding: 1.5rem;
-    border-radius: 15px;
-    border-left: 4px solid var(--celeste-pastel);
-}
-
-.form-info h4 {
-    color: var(--texto);
-    margin-bottom: 1rem;
-}
-
-.form-info ul {
+.nav-menu {
+    display: flex;
     list-style: none;
+    gap: 2.5rem;
+    margin: 0;
     padding: 0;
 }
 
-.form-info li {
-    padding: 0.3rem 0;
+.nav-menu a {
+    text-decoration: none;
+    color: var(--texto-oscuro);
+    font-weight: 400;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
     position: relative;
-    padding-left: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.form-info li:before {
-    content: "•";
-    color: var(--rosa-pastel);
-    font-weight: bold;
+.nav-menu a:hover {
+    color: var(--verde-sage);
+    background: rgba(138, 155, 140, 0.1);
+}
+
+.nav-menu a:after {
+    content: '';
     position: absolute;
-    left: 0;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background: var(--verde-sage);
+    transition: width 0.3s ease;
 }
 
-/* Estilos para formulario embebido */
-.confirmar-header {
+.nav-menu a:hover:after {
+    width: 60%;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: var(--texto-oscuro);
+}
+
+/* ===== HERO SECTION ELEGANTE ===== */
+.hero {
+    height: calc(100vh - 80px);
+    background: 
+        linear-gradient(rgba(248, 245, 240, 0.4), rgba(232, 228, 219, 0.6)),
+        url('../images/textura-papel.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    color: var(--texto-oscuro);
+    position: relative;
+    margin-top: 80px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.nombres-novios {
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    margin-bottom: 1.5rem;
+    color: var(--verde-sage);
+    font-style: italic;
+}
+
+.fecha-boda {
+    margin-bottom: 3rem;
+}
+
+.dia {
+    font-size: 4.5rem;
+    font-weight: 200;
+    display: block;
+    line-height: 1;
+    color: var(--texto-oscuro);
+    margin-bottom: 0.5rem;
+}
+
+.mes-ano {
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--texto-medio);
+}
+
+/* ===== COUNTDOWN MEJORADO ===== */
+.countdown-dias {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid var(--borde-sutil);
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.numero-dias {
+    font-size: 3.5rem;
+    font-weight: 200;
+    color: var(--verde-sage);
+    display: block;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.countdown-dias small {
+    font-size: 1rem;
+    color: var(--texto-medio);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.countdown-hoy {
+    text-align: center;
+    background: rgba(138, 155, 140, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid var(--verde-sage);
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.countdown-hoy .numero-dias {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--verde-sage);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.countdown-horas {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 200;
+    color: var(--texto-oscuro);
+    letter-spacing: 3px;
+}
+
+.countdown-horas span {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    margin: 0 2px;
+}
+
+.countdown-final {
+    text-align: center;
+    background: linear-gradient(135deg, var(--verde-sage), var(--verde-oliva));
+    color: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.texto-final {
+    font-size: 2.2rem;
+    font-weight: 300;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.countdown-final small {
+    font-size: 1rem;
+    opacity: 0.9;
+    letter-spacing: 1px;
+}
+
+/* ===== RESPONSIVE COUNTDOWN ===== */
+@media (max-width: 768px) {
+    .countdown-dias,
+    .countdown-hoy,
+    .countdown-final {
+        max-width: 280px;
+        padding: 1.5rem;
+    }
+    
+    .numero-dias {
+        font-size: 2.8rem;
+    }
+    
+    .countdown-hoy .numero-dias {
+        font-size: 2rem;
+    }
+    
+    .countdown-horas {
+        font-size: 1.7rem;
+    }
+    
+    .texto-final {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .countdown-dias,
+    .countdown-hoy,
+    .countdown-final {
+        max-width: 250px;
+        padding: 1.2rem;
+    }
+    
+    .numero-dias {
+        font-size: 2.5rem;
+    }
+}
+
+/* ===== CORRECCIÓN SCROLL INDICATOR ===== */
+.scroll-indicator {
+    position: absolute;
+    
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    color: var(--verde-sage);
+    font-size: 1.5rem;
+    z-index: 10; /* ← ESTA LÍNEA NUEVA */
+    pointer-events: none; /* ← Y ESTA TAMBIÉN */
+}
+
+/* Asegurar que el countdown tenga buen z-index */
+.countdown-dias,
+.countdown-hoy,
+.countdown-final {
+    position: relative;
+    z-index: 5;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+    40% { transform: translateX(-50%) translateY(-8px); }
+    60% { transform: translateX(-50%) translateY(-4px); }
+}
+
+/* ===== SECCIONES GENERALES ===== */
+.seccion {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    scroll-margin-top: 100px;
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--verde-sage);
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.titulo-seccion:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 1px;
+    background: var(--verde-sage);
+}
+
+/* ===== SECCIÓN EVENTOS ===== */
+.grid-eventos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-evento {
+    background: var(--blanco);
+    padding: 3rem 2.5rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--borde-sutil);
+}
+
+.card-evento:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.card-evento:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--verde-sage), var(--verde-oliva));
+}
+
+.icono-evento {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+.card-evento h3 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--texto-oscuro);
     margin-bottom: 2rem;
 }
 
+.detalle-evento {
+    margin-bottom: 2rem;
+}
+
+.lugar {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--verde-sage);
+    margin-bottom: 0.5rem;
+}
+
+.direccion {
+    color: var(--texto-medio);
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.horario {
+    background: var(--beige-medio);
+    padding: 1.2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border: 1px solid var(--borde-sutil);
+}
+
+.fecha {
+    font-weight: 500;
+    color: var(--texto-oscuro);
+}
+
+.hora {
+    font-size: 1.1rem;
+    color: var(--verde-sage);
+    font-weight: 500;
+}
+
+.btn-mapa {
+    background: var(--verde-sage);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.btn-mapa:hover {
+    background: var(--verde-oliva);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(138, 155, 140, 0.3);
+}
+
+/* ===== SECCIÓN CONFIRMAR ASISTENCIA ===== */
+.confirmar-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.confirmar-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
 .confirmar-header h2 {
-    color: var(--lila-pastel);
+    color: var(--verde-sage);
     margin-bottom: 1rem;
 }
 
 .confirmar-header p {
     font-size: 1.1rem;
-    color: var(--texto);
+    color: var(--texto-medio);
     max-width: 600px;
     margin: 0 auto;
+    line-height: 1.7;
 }
 
 .form-embed-container {
     background: var(--blanco);
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    max-width: 800px;
-    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border: 1px solid var(--borde-sutil);
 }
 
 .form-embed-container iframe {
-    border-radius: 15px;
+    border-radius: 12px;
     min-height: 600px;
+    border: 1px solid var(--borde-sutil);
 }
 
 .backup-note {
     text-align: center;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
+    color: var(--texto-medio);
+    font-size: 0.9rem;
     font-style: italic;
-    color: #666;
+}
+
+/* ===== SECCIÓN REGALOS ===== */
+.regalos-content {
+    text-align: center;
+    background: var(--blanco);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid var(--borde-sutil);
+}
+
+.alias-card {
+    margin-top: 2rem;
+}
+
+.alias-item {
+    background: var(--beige-medio);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--borde-sutil);
+}
+
+#alias-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--texto-oscuro);
+    font-family: 'Courier New', monospace;
+}
+
+.btn-copy {
+    background: var(--verde-sage);
+    color: var(--blanco);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
     font-size: 0.9rem;
 }
 
-/* Responsive */
+.btn-copy:hover {
+    background: var(--verde-oliva);
+}
+
+.alias-nota {
+    font-style: italic;
+    margin-top: 1rem;
+    color: var(--texto-medio);
+    font-size: 0.9rem;
+}
+
+/* ===== SECCIÓN FAQ ===== */
+.faq-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--blanco);
+    padding: 2.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    border: 1px solid var(--borde-sutil);
+}
+
+.faq-item h3 {
+    color: var(--verde-sage);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.faq-item p {
+    color: var(--texto-medio);
+    line-height: 1.7;
+}
+
+/* ===== FOOTER ELEGANTE ===== */
+footer {
+    background: linear-gradient(135deg, var(--verde-sage), var(--verde-oliva));
+    color: var(--blanco);
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-top: 4rem;
+}
+
+footer p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
-    .form-embed-container {
-        padding: 1rem;
+    body {
+        padding-top: 70px;
     }
-    
+
+    .navbar-elegante {
+        padding: 1rem 0;
+    }
+
+    .nav-container {
+        padding: 0 1.5rem;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: rgba(248, 245, 240, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 3rem;
+        gap: 2rem;
+        transition: left 0.3s ease;
+        border-top: 1px solid var(--borde-sutil);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu a {
+        font-size: 1.1rem;
+        padding: 1rem 2rem;
+    }
+
+    .hero {
+        height: calc(100vh - 70px);
+        margin-top: 70px;
+    }
+
+    .nombres-novios {
+        font-size: 2.8rem;
+        letter-spacing: 2px;
+    }
+
+    .dia {
+        font-size: 3.5rem;
+    }
+
+    .mes-ano {
+        font-size: 1.2rem;
+        letter-spacing: 3px;
+    }
+
+    .countdown {
+        gap: 1rem;
+    }
+
+    .countdown-item {
+        min-width: 70px;
+        padding: 1rem 0.5rem;
+    }
+
+    .countdown-item span {
+        font-size: 1.8rem;
+    }
+
+    .seccion {
+        padding: 4rem 1rem;
+    }
+
+    .grid-eventos {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .card-evento {
+        padding: 2rem 1.5rem;
+    }
+
+    .form-embed-container {
+        padding: 1.5rem;
+    }
+
     .form-embed-container iframe {
         min-height: 700px;
+    }
+
+    .regalos-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .alias-item {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .faq-item {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nombres-novios {
+        font-size: 2.2rem;
+    }
+
+    .dia {
+        font-size: 3rem;
+    }
+
+    .countdown {
+        flex-wrap: wrap;
+    }
+
+    .countdown-item {
+        min-width: 60px;
+    }
+}
+
+/* ===== UTILIDADES ===== */
+.text-center { text-align: center; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.mt-2 { margin-top: 2rem; }
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Agregar esto al final de tu styles.css */
+
+/* ===== SECCIÓN AGENDAR FECHA ===== */
+.agendar-content {
+    text-align: center;
+    background: var(--blanco);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    max-width: 500px;
+    margin: 0 auto;
+    border: 1px solid var(--borde-sutil);
+}
+
+.agendar-content p {
+    font-size: 1.1rem;
+    color: var(--texto-medio);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* ===== BOTONES CONSISTENTES ===== */
+.btn-mapa, .btn-copy {
+    background: var(--verde-sage);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.btn-mapa:hover, .btn-copy:hover {
+    background: var(--verde-oliva);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(138, 155, 140, 0.3);
+}
+
+/* Botón copiar más pequeño */
+.btn-copy {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+}
+
+/* ===== AJUSTES ESPECÍFICOS ===== */
+.container-eventos {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Asegurar que todas las secciones usen la misma estructura */
+.seccion > h2:not(.titulo-seccion) {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--verde-sage);
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.seccion > h2:not(.titulo-seccion):after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 1px;
+    background: var(--verde-sage);
+}
+
+/* ===== CORRECCIÓN HERO OVERLAY ===== */
+.hero-overlay {
+    display: none; /* Eliminar si no tenés imagen de fondo */
+}
+
+/* Si querés un fondo sutil en el hero, usar esto: */
+.hero {
+    background: 
+        linear-gradient(rgba(248, 245, 240, 0.9), rgba(232, 228, 219, 0.7)),
+        url('../images/textura-papel.jpg') center/cover;
+}
+
+/* ===== RESPONSIVE ADICIONAL ===== */
+@media (max-width: 768px) {
+    .agendar-content {
+        padding: 2rem 1.5rem;
+        margin: 0 1rem;
+    }
+    
+    .nav-menu {
+        gap: 1.5rem;
     }
 }
