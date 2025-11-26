@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Merry & Fran - Nuestra Boda</title>
     <link rel="stylesheet" href="css/styles.css">
+    
 </head>
+
 <body>
     <!-- NAVBAR -->
     <nav class="navbar-elegante">
@@ -174,5 +176,37 @@
     <script src="js/calendar.js"></script>
     <script src="js/form.js"></script>
     <script src="js/copy.js"></script>
+    <div class="flower-container"></div>
+<script>
+const flowerContainer = document.querySelector('.flower-container');
+
+function createFlower() {
+    const flower = document.createElement('div');
+    flower.classList.add('flower');
+
+    // 🔥 Nombres de imágenes que vos vas a subir 🔥
+    const images = [
+        "flores1.png",
+        "flores2.png",
+        "petalo1.png"
+    ];
+
+    // Elegir una al azar
+    flower.style.backgroundImage = `url('img/${images[Math.floor(Math.random() * images.length)]}')`;
+
+    // Posición random en la pantalla
+    flower.style.left = Math.random() * 100 + "vw";
+    flower.style.animationDuration = 4 + Math.random() * 4 + "s";
+
+    flowerContainer.appendChild(flower);
+
+    // Eliminar después de que cae
+    setTimeout(() => flower.remove(), 8000);
+}
+
+// Crear flores cada 500ms
+setInterval(createFlower, 500);
+</script>
+
 </body>
 </html>
