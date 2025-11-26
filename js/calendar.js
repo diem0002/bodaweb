@@ -1,6 +1,6 @@
 function agendarEnCalendario() {
-    const fechaBoda = '20241215T160000';
-    const fechaFin = '20241215T230000';
+    const fechaBoda = '20251126T230000';
+    const fechaFin = '20251126T230000';
     
     const detalles = {
         title: 'Boda de María & Juan',
