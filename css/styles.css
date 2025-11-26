@@ -833,7 +833,7 @@ footer p {
 .hero {
     background: 
         linear-gradient(rgba(248, 245, 240, 0.9), rgba(232, 228, 219, 0.7)),
-        url('../images/flores3.png') center/cover;
+        url('/images/flores3.png') center/cover;
 }
 
 /* ===== RESPONSIVE ADICIONAL ===== */
