@@ -2,7 +2,7 @@
 
 function actualizarCountdown() {
     // 🎯 SOLO CAMBIÁ ESTA FECHA - Formato ISO con zona horaria Argentina
-    const fechaBoda = new Date('2025-11-27T22:00:00-03:00'); // 27 Nov 2025, 16:00 ARG
+    const fechaBoda = new Date('2026-11-22T20:20:00-03:00'); // 22 Nov 2026, 20:00 ARG
     
     const ahora = new Date(); // Hora local Argentina
     const diferencia = fechaBoda.getTime() - ahora.getTime();
@@ -138,7 +138,7 @@ function initScrollAnimations() {
 // ========== FUNCIONES EXTRAS ==========
 
 function debugInfo() {
-    const fechaBoda = new Date('2025-11-27T16:00:00-03:00');
+    const fechaBoda = new Date('2026-11-22T20:00:00-03:00');
     console.log('🐛 Debug Info:');
     console.log('- Fecha boda:', fechaBoda.toLocaleString('es-AR'));
     console.log('- Días faltantes:', Math.floor((fechaBoda - new Date()) / (1000 * 60 * 60 * 24)));
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // 🧪 FUNCIÓN PARA VERIFICAR FECHAS
 function verificarFechas() {
-    const fechaBoda = new Date('2025-11-27T16:00:00-03:00');
+    const fechaBoda = new Date('2026-11-22T20:00:00-03:00');
     const ahora = new Date();
     
     console.log('🔍 VERIFICACIÓN FECHAS:', {
