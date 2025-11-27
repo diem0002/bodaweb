@@ -59,7 +59,7 @@
         <div class="grid-eventos">
             <!-- Ceremonia -->
             <div class="card-evento">
-                <div class="icono-evento">💒</div>
+                <img src="icon/iglecia1.png" alt="Ceremonia" class="icono-imagen">
                 <h3>Ceremonia</h3>
                 <div class="detalle-evento">
                     <p class="lugar">Castorial Sara Antonio de Padua</p>
@@ -76,7 +76,7 @@
 
             <!-- Recepción -->
             <div class="card-evento">
-                <div class="icono-evento">🎉</div>
+                <img src="icon/fiesta1.png" alt="Fiesta" class="icono-imagen">
                 <h3>Fiesta</h3>
                 <div class="detalle-evento">
                     <p class="lugar">Cuba Progresiva</p>
@@ -177,36 +177,46 @@
     <script src="js/form.js"></script>
     <script src="js/copy.js"></script>
     <div class="flower-container"></div>
-<script>
-const flowerContainer = document.querySelector('.flower-container');
 
-function createFlower() {
-    const flower = document.createElement('div');
-    flower.classList.add('flower');
+    <script>
+        const flowerContainer = document.querySelector('.flower-container');
 
-    // 🔥 Nombres de imágenes que vos vas a subir 🔥
-    const images = [
-        "flores1.png",
-        "flores3.png",
-        "petalo1.png"
-    ];
+        function createFlower() {
+        const flower = document.createElement('div');
+        flower.classList.add('flower');
 
-    // Elegir una al azar
-    flower.style.backgroundImage = `url('img/${images[Math.floor(Math.random() * images.length)]}')`;
+        // ✅ RUTAS CORRECTAS PARA GITHUB PAGES
+        const img = [
+            "img/hoja1.png",
+            "img/hoja2.png",
+            "img/petalo1.png",  // o "img/flores1.png" según tu carpeta
+            
+        ];
 
-    // Posición random en la pantalla
-    flower.style.left = Math.random() * 100 + "vw";
-    flower.style.animationDuration = 4 + Math.random() * 4 + "s";
+        // Verificar que las imágenes existen
+        flower.style.backgroundImage = `url('${img[Math.floor(Math.random() * img.length)]}')`;
 
-    flowerContainer.appendChild(flower);
+        // Tamaños variables
+        const sizes = [90, 80, 100, 200];
+        const size = sizes[Math.floor(Math.random() * sizes.length)];
+        flower.style.width = size + "px";
+        flower.style.height = size + "px";
 
-    // Eliminar después de que cae
-    setTimeout(() => flower.remove(), 8000);
-}
+        // Posición y animación
+        flower.style.left = Math.random() * 100 + "vw";
+        flower.style.animationDuration = (3 + Math.random() * 5) + "s";
+        
+        // Rotación inicial aleatoria
+        flower.style.transform = `rotate(${Math.random() * 360}deg)`;
 
-// Crear flores cada 500ms
-setInterval(createFlower, 500);
-</script>
+        flowerContainer.appendChild(flower);
+
+        setTimeout(() => flower.remove(), 10000);
+     }
+
+        // Crear flores cada 800ms
+        setInterval(createFlower, 800);
+    </script>
 
 </body>
 </html>
