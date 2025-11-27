@@ -127,7 +127,7 @@ h1, h2, h3, h4, h5, h6 {
     height: calc(100vh - 80px);
     background: 
         linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-        url('../images/flores1.png') center/cover no-repeat;
+        url('../images/flores2.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -143,6 +143,7 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 800px;
     padding: 0 2rem;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
 
 .nombres-novios {
     font-size: 4rem;
