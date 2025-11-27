@@ -126,11 +126,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero {
     height: calc(100vh - 80px);
     /* En tu styles.css - RUTAS ABSOLUTAS */
-.hero {
-    background: 
-        linear-gradient(rgba(248, 245, 240, 0.9), rgba(232, 228, 219, 0.7)),
-        url('/bodaweb/images/flores2') center/cover; /* ← Ruta absoluta */
-}
+
     display: flex;
     align-items: center;
     justify-content: center;
