@@ -127,7 +127,7 @@ h1, h2, h3, h4, h5, h6 {
     height: calc(100vh - 80px);
     background: 
         linear-gradient(rgba(0, 0, 0, 0.3), rgba(0,0,0,0.4)),
-        url('../img/flores1.png') center/cover no-repeat; /* ← RUTA CORREGIDA */
+        url center/cover no-repeat; /* ← RUTA CORREGIDA */
     display: flex;
     align-items: center;
     justify-content: center;

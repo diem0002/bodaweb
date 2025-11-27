@@ -3,7 +3,7 @@ function agendarEnCalendario() {
     const fechaFin = '20251126T230000';
     
     const detalles = {
-        title: 'Boda de María & Juan',
+        title: 'Boda de Florencia & Joaquin',
         description: '¡No te pierdas nuestro día especial! Ceremonia a las 16:00 y recepción a las 19:00.',
         location: 'Iglesia San José, Av. Siempre Viva 123, Ciudad',
         start: fechaBoda,
