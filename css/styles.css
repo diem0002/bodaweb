@@ -126,8 +126,8 @@ h1, h2, h3, h4, h5, h6 {
 .hero {
     height: calc(100vh - 80px);
     background: 
-        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-        url('../images/flores2.jpg') center/cover no-repeat;
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0,0,0,0.4)),
+        url('../img/flores1.png') center/cover no-repeat; /* ← RUTA CORREGIDA */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -146,6 +146,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nombres-novios {
+    text-shadow: none !important; /* ← ELIMINA SOMBRAS */
     font-size: 4rem;
     font-weight: 300;
     letter-spacing: 4px;
@@ -153,6 +154,16 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--verde-sage);
     font-style: italic;
 }
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 2rem;
+    text-shadow: none !important; /* ← TAMBIÉN QUITA SOMBRA DEL CONTENEDOR */
+}
+
+
 
 .fecha-boda {
     margin-bottom: 3rem;
