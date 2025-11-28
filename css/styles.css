@@ -981,3 +981,50 @@ footer p {
 .card-evento:hover .icono-imagen {
     animation: float 2s ease-in-out infinite;
 }
+
+/* ===== ESTILOS PARA FORMULARIO YA ENVIADO ===== */
+.formulario-enviado {
+    max-width: 500px !important;
+    margin: 0 auto !important;
+    padding: 1.5rem !important;
+    transition: all 0.5s ease;
+}
+
+.formulario-enviado iframe {
+    min-height: 200px !important;
+    height: 200px !important;
+}
+
+/* Ocultar el texto de backup cuando el formulario está enviado */
+.formulario-enviado + .form-backup {
+    display: none;
+}
+
+
+/* ===== BOTÓN WHATSAPP ===== */
+.whatsapp-backup {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 2rem;
+   
+}
+
+.btn-whatsapp {
+    text-align: center;
+    display: inline-block;
+    background: var(--verde-sage);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(138, 155, 140, 0.3);
+}
+
+.btn-whatsapp:hover {
+    background: var(--verde-oliva);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(138, 155, 140, 0.3);
+}
