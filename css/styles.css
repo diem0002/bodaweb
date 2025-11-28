@@ -127,7 +127,7 @@ h1, h2, h3, h4, h5, h6 {
     height: calc(100vh - 80px);
     background: 
         linear-gradient(rgba(0, 0, 0, 0.3), rgba(0,0,0,0.4)),
-        url('./images/flores1.png') center/cover no-repeat;
+        url('.images/flores1.png') center/cover no-repeat;
     /* ↑ Punto y barra ↑ */
     display: flex;
     align-items: center;
@@ -842,12 +842,7 @@ footer p {
     display: none; /* Eliminar si no tenés imagen de fondo */
 }
 
-/* Si querés un fondo sutil en el hero, usar esto: */
-.hero {
-    background: 
-        linear-gradient(rgba(248, 245, 240, 0.9), rgba(232, 228, 219, 0.7)),
-        url('/images/flores1.png') center/cover;
-}
+
 
 /* ===== RESPONSIVE ADICIONAL ===== */
 @media (max-width: 768px) {
