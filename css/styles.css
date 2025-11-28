@@ -126,14 +126,13 @@ h1, h2, h3, h4, h5, h6 {
 .hero {
     height: calc(100vh - 80px);
     background: 
-        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0,0,0,0.4)),
+        linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2)),
         url('../images/flores1.png') center/cover no-repeat;
-    /* ↑ Punto y barra ↑ */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    color: var(--texto-oscuro);
     position: relative;
     margin-top: 80px;
 }
