@@ -2,7 +2,7 @@
 
 function actualizarCountdown() {
     // 🎯 SOLO CAMBIÁ ESTA FECHA - Formato ISO con zona horaria Argentina
-    const fechaBoda = new Date('2026-11-22T20:20:00-03:00'); // 22 Nov 2026, 20:00 ARG
+    const fechaBoda = new Date('2026-11-21T21:00:00-03:00'); // 21 Nov 2026, 20:00 ARG
     
     const ahora = new Date(); // Hora local Argentina
     const diferencia = fechaBoda.getTime() - ahora.getTime();
@@ -63,10 +63,15 @@ function actualizarCountdown() {
 
 // ========== FUNCIONES DE MAPAS ==========
 
-function abrirMapa(tipo) {
-    let url = tipo === 'ceremonia' 
-        ? 'https://maps.google.com/?q=Castorial+Sara+Antonio+de+Padua'
-        : 'https://maps.google.com/?q=Cuba+Progresiva';
+// En tu archivo js/main.js, actualiza la función abrirMapa:
+function abrirMapa(lugar) {
+    let url;
+    if (lugar === 'cuatro-elementos') {
+        url = 'https://maps.app.goo.gl/d2kHpUK2byqMvjxp8';
+    } else {
+        // Por si acaso mantienes otros lugares
+        url = 'https://maps.app.goo.gl/d2kHpUK2byqMvjxp8';
+    }
     window.open(url, '_blank');
 }
 

@@ -471,6 +471,55 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 5px 15px rgba(138, 155, 140, 0.3);
 }
 
+/* ===== BOTÓN INSTAGRAM ===== */
+
+/* ===== BOTÓN INSTAGRAM - MISMO ESTILO QUE MAPA ===== */
+.instagram-link {
+    margin-top: 1.5rem;
+}
+
+.btn-instagram {
+    background: var(--verde-sage);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-decoration: none;
+    font-family: inherit;
+}
+
+.btn-instagram:hover {
+    background: var(--verde-oliva);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(138, 155, 140, 0.3);
+}
+
+/* Nota de ubicación */
+.nota-ubicacion {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background: rgba(138, 155, 140, 0.08);
+    border-radius: 12px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid var(--borde-sutil);
+}
+
+.nota-ubicacion p {
+    color: var(--texto-oscuro);
+    font-style: italic;
+    font-size: 1rem;
+    margin: 0;
+}
+
 /* ===== SECCIÓN CONFIRMAR ASISTENCIA ===== */
 .confirmar-content {
     text-align: center;
@@ -855,8 +904,8 @@ footer p {
     }
 }
 
-/* ===== ANIMACIÓN DE FLORES ===== */
-/* ===== ANIMACIÓN DE FLORES/ HOJAS MÁS GRANDES ===== */
+
+/* ===== ANIMACIÓN DE FLORES/ HOJAS  ===== */
 .flower-container {
     position: fixed;
     top: 0;
