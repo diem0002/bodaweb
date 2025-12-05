@@ -1083,3 +1083,19 @@ footer p {
     box-shadow: 0 5px 15px rgba(138, 155, 140, 0.3);
     
 }
+
+/* ===== SECCIÓN DRESS CODE ===== */
+#dresscode .grid-eventos {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#dresscode .card-evento {
+    padding: 3rem 2.5rem;
+}
+
+#dresscode .detalle-evento {
+    text-align: center;
+    padding: 1rem 0;
+}
