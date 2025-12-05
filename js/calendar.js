@@ -1,6 +1,6 @@
 function agendarEnCalendario() {
-    const fechaBoda = '20261121T200000';
-    const fechaFin = '20261122T210000';
+    const fechaBoda = '20261121T190000';
+    const fechaFin = '20261121T210000';
     
     const detalles = {
         title: 'Boda de Florencia & Joaquin',
