@@ -1099,3 +1099,9 @@ footer p {
     text-align: center;
     padding: 1rem 0;
 }
+/* Solo para dresscode, fuerza una sola columna */
+section#dresscode .grid-eventos {
+    grid-template-columns: 1fr !important;
+    max-width: 500px;
+    margin: 0 auto;
+}
