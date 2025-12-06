@@ -98,15 +98,29 @@ function initNavbar() {
 }
 
 // ========== SCROLL SUAVE ==========
-
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
+            const targetId = this.getAttribute('href');
+            
+            // Si es el hero, ir al top
+            if (targetId === '#hero') {
                 window.scrollTo({
-                    top: target.offsetTop - 80,
+                    top: 0,
+                    behavior: 'smooth'
+                });
+                return;
+            }
+            
+            const target = document.querySelector(targetId);
+            if (target) {
+                // Calcular posición exacta considerando navbar
+                const navbarHeight = document.querySelector('.navbar-elegante').offsetHeight;
+                const targetPosition = target.offsetTop - navbarHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
                     behavior: 'smooth'
                 });
             }

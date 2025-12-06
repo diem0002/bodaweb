@@ -134,7 +134,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     color: var(--texto-oscuro);
     position: relative;
-    margin-top: 80px;
+    
 }
 
 .hero-content {
@@ -339,10 +339,15 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== SECCIONES GENERALES ===== */
 .seccion {
-    padding: 6rem 2rem;
+    padding: 8rem 2rem 6rem; /* padding-top: 8rem, padding-bottom: 6rem */
     max-width: 1200px;
     margin: 0 auto;
-    scroll-margin-top: 100px;
+    scroll-margin-top: 80px; /* Cambiado de 100px a 80px */
+}
+
+/* El hero NO necesita padding-top extra */
+#hero.seccion {
+    padding: 6rem 2rem; /* Mantiene el padding original */
 }
 
 .titulo-seccion {
@@ -710,7 +715,7 @@ footer p {
 
     .hero {
         height: calc(100vh - 70px);
-        margin-top: 70px;
+        
     }
 
     .nombres-novios {
@@ -741,7 +746,8 @@ footer p {
     }
 
     .seccion {
-        padding: 4rem 1rem;
+        padding: 6rem 1rem 4rem;
+        scroll-margin-top: 70px;
     }
 
     .grid-eventos {
@@ -1105,3 +1111,7 @@ section#dresscode .grid-eventos {
     max-width: 500px;
     margin: 0 auto;
 }
+
+
+
+
