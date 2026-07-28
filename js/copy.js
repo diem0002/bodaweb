@@ -31,7 +31,7 @@ function copiarAlias() {
 // Funciones del Modal de Regalos
 function abrirModalRegalos() {
     const modal = document.getElementById('modal-regalos');
-    if (modal) modal.style.display = 'block';
+    if (modal) modal.style.display = 'flex';
 }
 
 function cerrarModalRegalos() {

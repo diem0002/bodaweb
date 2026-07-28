@@ -657,7 +657,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== MODAL REGALOS ===== */
 .modal {
-    display: none;
+    display: none; /* Se cambia a flex en JS */
     position: fixed;
     z-index: 2000;
     left: 0;
@@ -666,14 +666,13 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-content {
     background-color: var(--blanco);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
     width: 90%;
     max-width: 500px;
     padding: 3rem 2rem;
@@ -685,8 +684,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes modalFadeIn {
-    from { opacity: 0; transform: translate(-50%, -60%); }
-    to { opacity: 1; transform: translate(-50%, -50%); }
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .close-modal {
