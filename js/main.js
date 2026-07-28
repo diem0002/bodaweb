@@ -20,33 +20,24 @@ function actualizarCountdown() {
 
     if (diferencia > 0) {
         const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
         
-        if (dias >= 2) {
+        const dEl = document.getElementById('days');
+        const hEl = document.getElementById('hours');
+        const mEl = document.getElementById('minutes');
+        
+        if (dEl && hEl && mEl) {
+            dEl.textContent = dias.toString().padStart(2, '0');
+            hEl.textContent = horas.toString().padStart(2, '0');
+            mEl.textContent = minutos.toString().padStart(2, '0');
+        } else {
             countdownElement.innerHTML = `
                 <div class="countdown-dias">
-                    <span class="numero-dias">${dias}</span>
-                    <small>días para nuestro gran día</small>
-                </div>
-            `;
-        }
-        else if (dias === 1) {
-            countdownElement.innerHTML = `
-                <div class="countdown-dias">
-                    <span class="numero-dias">¡Mañana!</span>
-                    <small>nos casamos</small>
-                </div>
-            `;
-        }
-        else {
-            const horas = Math.floor(diferencia / (1000 * 60 * 60));
-            const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
-            
-            countdownElement.innerHTML = `
-                <div class="countdown-hoy">
-                    <span class="numero-dias">¡Hoy es el día!</span>
-                    <small>Falta poco para la ceremonia</small>
-                    <div class="countdown-horas">
-                        <span>${horas.toString().padStart(2, '0')}</span>:<span>${minutos.toString().padStart(2, '0')}</span>
+                    <div style="display: flex; justify-content: center; gap: 2rem;">
+                        <div><span class="numero-dias">${dias}</span><small>días</small></div>
+                        <div><span class="numero-dias">${horas.toString().padStart(2, '0')}</span><small>horas</small></div>
+                        <div><span class="numero-dias">${minutos.toString().padStart(2, '0')}</span><small>min</small></div>
                     </div>
                 </div>
             `;
