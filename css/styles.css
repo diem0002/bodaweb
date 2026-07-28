@@ -178,12 +178,14 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.5rem;
 }
 
-.mes-ano {
+.mes, .ano {
     font-size: 1.5rem;
     font-weight: 300;
     letter-spacing: 6px;
     text-transform: uppercase;
     color: var(--texto-medio);
+    display: block;
+    line-height: 1.4;
 }
 
 /* ===== COUNTDOWN MEJORADO ===== */
@@ -651,6 +653,72 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-copy:hover {
     background: var(--verde-oliva);
+}
+
+/* ===== MODAL REGALOS ===== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: var(--blanco);
+    margin: 15% auto;
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    max-width: 500px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    border: 1px solid var(--borde-sutil);
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: var(--texto-medio);
+    font-size: 2.5rem;
+    font-weight: 300;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    line-height: 1;
+}
+
+.close-modal:hover {
+    color: var(--verde-sage);
+}
+
+.datos-bancarios {
+    background: var(--beige-medio);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    text-align: left;
+    border: 1px solid var(--borde-sutil);
+}
+
+.datos-bancarios p {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    color: var(--texto-oscuro);
+}
+
+.datos-bancarios p:last-child {
+    margin-bottom: 0;
 }
 
 .alias-nota {

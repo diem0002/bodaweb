@@ -32,7 +32,8 @@
             <h1 class="nombres-novios">Flor & Joaco</h1>
             <div class="fecha-boda">
                 <span class="dia">21</span>
-                <span class="mes-ano">noviembre 2026</span>
+                <span class="mes">noviembre</span>
+                <span class="ano">2026</span>
             </div>
             <div class="countdown" id="countdown">
                 <div class="countdown-item">
@@ -99,7 +100,7 @@
     
     <!-- Nota explicativa -->
     <div class="nota-ubicacion">
-        <p>💡 Ambas celebraciones serán en el mismo lugar, comenzando con la ceremonia civil y continuando con la fiesta.</p>
+        <p>💡 Ambas celebraciones serán el mismo lugar te pedimos que seas puntual</p>
     </div>
 </section>
 
@@ -138,7 +139,7 @@
 
         <!-- BOTÓN DE WHATSAPP NUEVO -->
          <div class="whatsapp-backup">
-        <a href="https://wa.me/5493454932202?text=Hola!%20Quiero%20confirmar%20mi%asistencia%20a%20tu%20boda%20" 
+        <a href="https://wa.me/5493413443233" 
            class="btn-whatsapp" 
            target="_blank">
             📱 Enviar WhatsApp
@@ -148,19 +149,28 @@
 
     <!-- REGALOS -->
     <section id="regalos" class="seccion">
-        <h2 class="titulo-seccion">Lista de Regalos</h2>
+        <h2 class="titulo-seccion">Regalos</h2>
         <div class="regalos-content">
             <p>Tu presencia es nuestro mejor regalo, pero si querés ayudarnos con la luna de miel:</p>
             <div class="alias-card">
-                <h3>Alias para transferencia</h3>
-                <div class="alias-item">
-                    <span id="alias-text">flor.joaco.amor</span>
-                    <button class="btn-copy" onclick="copiarAlias()">📋 Copiar</button>
-                </div>
-                
+                <button class="btn-mapa" onclick="abrirModalRegalos()">🎁 Ver Datos Bancarios</button>
             </div>
         </div>
     </section>
+
+    <!-- Modal Regalos -->
+    <div id="modal-regalos" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="cerrarModalRegalos()">&times;</span>
+            <h3>Datos Bancarios</h3>
+            <div class="datos-bancarios">
+                <p><strong>Titular:</strong> Juan Pérez</p>
+                <p><strong>CBU:</strong> 0000000000000000000000</p>
+                <p><strong>Alias:</strong> <span id="alias-text">flor.joaco.amor</span></p>
+            </div>
+            <button class="btn-copy" onclick="copiarAlias()">📋 Copiar Alias</button>
+        </div>
+    </div>
     <!-- DRESS CODE (NUEVA SECCIÓN) -->
 <section id="dresscode" class="seccion">
     <h2 class="titulo-seccion">Dress Code</h2>
@@ -183,9 +193,7 @@
             
             <div class="faq-item">
                 <h3>¿Puedo llevar niños?</h3>
-                <p>Queremos que los adultos se diviertan, bailen y disfruten como quieran.
-                Sabemos cuánto querés a tus hijos (¡nosotros también!), pero esperamos que puedan quedarse en casa para que vos te escapes un ratito.
-                ¡A disfrutar sin culpas! 🥂</p>
+                <p>Queremos que esta noche se diviertan, bailen y disfruten. Sabemos cuánto querés a tus hijos, pero hoy es solo para adultos.</p>
             </div>
             <div class="faq-item">
             <h3>¿A qué hora debemos llegar?</h3>

@@ -27,3 +27,21 @@ function copiarAlias() {
         alert('Alias copiado: ' + alias);
     });
 }
+
+// Funciones del Modal de Regalos
+function abrirModalRegalos() {
+    const modal = document.getElementById('modal-regalos');
+    if (modal) modal.style.display = 'block';
+}
+
+function cerrarModalRegalos() {
+    const modal = document.getElementById('modal-regalos');
+    if (modal) modal.style.display = 'none';
+}
+
+window.addEventListener('click', function(event) {
+    const modal = document.getElementById('modal-regalos');
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+});
