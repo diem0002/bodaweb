@@ -894,11 +894,13 @@ footer p {
     }
 
     .countdown {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        gap: 0.5rem;
     }
 
     .countdown-item {
         min-width: 60px;
+        padding: 0.5rem;
     }
 }
 
