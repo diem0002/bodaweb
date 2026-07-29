@@ -5,14 +5,14 @@ function copiarAlias() {
     navigator.clipboard.writeText(alias).then(function() {
         // Mostrar feedback
         const boton = document.querySelector('.btn-copy');
-        const textoOriginal = boton.textContent;
+        const htmlOriginal = boton.innerHTML;
         
-        boton.textContent = '✅ Copiado!';
-        boton.style.background = 'var(--verde-pastel)';
+        boton.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 5px; margin-bottom: 3px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Copiado!';
+        boton.style.background = 'var(--verde-oliva)';
         
         setTimeout(() => {
-            boton.textContent = textoOriginal;
-            boton.style.background = 'var(--celeste-pastel)';
+            boton.innerHTML = htmlOriginal;
+            boton.style.background = '';
         }, 2000);
         
     }).catch(function(err) {
