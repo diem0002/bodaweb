@@ -944,6 +944,12 @@ footer p {
 }
 
 /* ===== BOTONES CONSISTENTES ===== */
+.btn-mapa, .btn-copy, .btn-instagram, .btn-whatsapp {
+    font-family: var(--fuente-principal) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px;
+}
+
 .btn-mapa, .btn-copy {
     background: var(--verde-sage);
     color: white;
